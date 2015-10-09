@@ -12,25 +12,28 @@ public class MAXIMINB
 
     public void processMaxMin()
     {
-        numberList = new int[20];
+        numberList = new int[30];
 
-        for (int i=0; i<20; i++) {
+        for (int i=0; i<30; i++) {
             numberList[i] = randomGenerator.nextInt(100);
         }
 
         maxVal = 0;
         minVal = 100;
+        
         int index = 0;
-        while (index < 20) {
+        while (index < 30) {
+            
             if ((numberList[index] > maxVal) && (numberList[index] != maxVal)){
                 maxVal = numberList[index];
             }
+            
             index = index + 1;
             difference = maxVal - minVal;
         }
 
         index = 0;
-        while (index < 20) {
+        while (index < 30) {
             if ((numberList[index] < minVal) && (numberList[index] != minVal)) {
                 minVal = numberList[index];
             }
