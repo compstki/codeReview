@@ -1,16 +1,18 @@
 import java.util.Random;
 public class SEARCHER
 {
-    private Random randomGenerator = new Random();
-    private int[] numberList;
-    private int target;
-    private boolean found;
 
     public SEARCHER() {
     }
 
     public void processSearch()
     {
+
+        Random randomGenerator = new Random();
+        int[] numberList;
+        int target;
+        boolean found;
+
         numberList = new int[20];
 
         for (int i=0; i<20; i++) {

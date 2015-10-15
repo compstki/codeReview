@@ -1,17 +1,18 @@
 import java.util.Random;
 public class MAXIMIN
 {
-    private Random randomGenerator = new Random();
-    private int[] tempList;
-    private int maxTemperature;
-    private int minTemperature;
-    private int tempReadings = 30;
 
     public MAXIMIN() {
     }
 
     public void processMaxMin()
     {
+        Random randomGenerator = new Random();
+        int[] tempList;
+        int maxTemperature;
+        int minTemperature;
+        int tempReadings = 30;
+
         tempList = new int[tempReadings];
 
         for (int i=0; i<tempReadings; i++) {
@@ -20,14 +21,14 @@ public class MAXIMIN
 
         maxTemperature = tempList[0];
         minTemperature = tempList[0];
-        
+
         for (int i=1; i<tempReadings; i++) {
-            
+
             if (tempList[i] > maxTemperature) {
                 maxTemperature = tempList[i];
-                
+
             } else {
-                
+
                 if (tempList[i] < minTemperature) {
                     minTemperature = tempList[i];
                 }
